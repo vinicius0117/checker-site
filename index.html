@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Checker de Chassi</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checker de chassi offline com banco próprio">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Checker de Chassi</h1>
+  <p>Banco local • Offline • Alta performance</p>
+</header>
+
+<main>
+
+<section class="card">
+  <h2>📥 Importar banco de dados</h2>
+  <input type="file" id="bancoFile" accept=".txt,.csv">
+  <button onclick="importarBanco()">Importar Banco</button>
+  <div id="status"></div>
+</section>
+
+<section class="card">
+  <h2>🔍 Verificar chassis</h2>
+  <textarea id="lista" placeholder="Um chassi por linha"></textarea>
+  <button onclick="verificar()">Verificar</button>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h3>✅ COM PLACA</h3>
+    <pre id="comPlaca"></pre>
+  </div>
+
+  <div class="card">
+    <h3>❌ SEM PLACA</h3>
+    <pre id="semPlaca"></pre>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <small>Uso educativo • Offline</small>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
